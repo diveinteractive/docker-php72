@@ -44,8 +44,7 @@ Use the Dockerfile, customize it as desired and build it!
 
 Of course, you must replace `diveinteractive/php72` with something else if you want to publish your customized version yourself.
 
-    docker build -t diveinteractive/php72 .
-    docker push diveinteractive/php72
+    docker build -t diveinteractive/php72 . && docker push diveinteractive/php72
 
 If you want to tag the current version (let's say... `1.0`) based on the latest version you just pushed:
 
