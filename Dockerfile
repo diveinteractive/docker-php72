@@ -18,7 +18,7 @@ RUN apt-get update -yqq \
         curl json intl gd xml zip bz2 opcache exif \
     # Install XDebug    
     && pecl install xdebug \
-    && docker-php-ext-enable xdebug
+    && docker-php-ext-enable xdebug \
     # Install Imagick    
     && pecl install imagick \
     && docker-php-ext-enable imagick
