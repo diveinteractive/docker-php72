@@ -12,14 +12,18 @@ RUN apt-get update -yqq \
             libexpat1-dev libbz2-dev libgmp3-dev libldap2-dev \
             unixodbc-dev libsqlite3-dev libaspell-dev \
             libsnmp-dev libpcre3-dev libtidy-dev -yqq \
-    # Install PHP Extensions        
+    # Install PHP Extensions
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install mbstring pdo pdo_pgsql pdo_mysql mysqli \
         curl json intl gd xml zip bz2 opcache exif \
-    # Install XDebug    
+    # Install XDebug
     && pecl install xdebug \
-    && docker-php-ext-enable xdebug \
-    # Install Imagick    
+    && docker-php-ext-enable xdebug
+
+# Install Imagemagick & PHP Imagick ext
+RUN apt-get install -y \
+        libmagickwand-dev --no-install-recommends \
+    # Install Imagick
     && pecl install imagick \
     && docker-php-ext-enable imagick
 
