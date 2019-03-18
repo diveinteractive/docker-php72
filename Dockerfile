@@ -19,6 +19,9 @@ RUN apt-get update -yqq \
     # Install XDebug    
     && pecl install xdebug \
     && docker-php-ext-enable xdebug
+    # Install Imagick    
+    && pecl install imagick \
+    && docker-php-ext-enable imagick
 
 # Set up Node JS 10.x
 RUN apt-get install gnupg2 -yqq \
