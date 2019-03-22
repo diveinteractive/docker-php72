@@ -15,7 +15,7 @@ RUN apt-get update -yqq \
     # Install PHP Extensions
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install mbstring pdo pdo_pgsql pdo_mysql mysqli \
-        curl json intl gd xml zip bz2 opcache exif \
+        curl json intl gd xml zip bz2 opcache exif bcmath \
     # Install XDebug
     && pecl install xdebug \
     && docker-php-ext-enable xdebug
