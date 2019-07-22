@@ -48,7 +48,7 @@ Of course, you must replace `diveinteractive/php72` with something else if you w
 
 If you want to tag the current version (let's say... `1.0`) based on the latest version you just pushed:
 
-    docker image tag diveinteractive/php72:latest nicoverbruggen/php72:1.0
+    docker image tag diveinteractive/php72:latest diveinteractive/php72:1.0
     docker push diveinteractive/php72:1.0
 
 Anyone can run it afterwards:
